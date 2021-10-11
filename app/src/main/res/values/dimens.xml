@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titulo_size">25dp</dimen>
+
+
+    <!-- Formulario -->
+
+    <dimen name="arriba">10dp</dimen>
+    <dimen name="abajo">10dp</dimen>
+    <dimen name="derecha">5dp</dimen>
+    <dimen name="izquierda">5dp</dimen>
+    <dimen name="texto">20dp</dimen>
+
+</resources>

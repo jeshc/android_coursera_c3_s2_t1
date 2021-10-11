@@ -1,15 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
         android:text="@string/titulo_confirmacion"
+        android:textSize="@dimen/titulo_size"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/arriba"
         >
 
-    </TextView>
+        <TextView
+            android:paddingTop="@dimen/arriba"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Nombre: "
+            android:textSize="@dimen/texto"
+            />
 
-</RelativeLayout>
+        <TextView
+            android:paddingTop="@dimen/arriba"
+            android:paddingBottom="@dimen/abajo"
+            android:id="@+id/txtNacimientoConf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jesus"
+            android:textSize="@dimen/texto"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/arriba"
+        >
+
+        <TextView
+            android:paddingTop="@dimen/arriba"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Fecha nacimiento: "
+            android:textSize="@dimen/texto"
+            />
+
+        <TextView
+            android:paddingTop="@dimen/arriba"
+            android:paddingBottom="@dimen/abajo"
+            android:id="@+id/txtNombreConf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22/02/2000"
+            android:textSize="@dimen/texto"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/arriba"
+        >
+
+        <TextView
+            android:paddingTop="@dimen/arriba"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Telefono: "
+            android:textSize="@dimen/texto"
+            />
+
+        <TextView
+            android:paddingTop="@dimen/arriba"
+            android:paddingBottom="@dimen/abajo"
+            android:id="@+id/txtTelefonoConf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="55-8899-7766"
+            android:textSize="@dimen/texto"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/arriba"
+        >
+
+        <TextView
+            android:paddingTop="@dimen/arriba"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="e-mail: "
+            android:textSize="@dimen/texto"
+            />
+
+        <TextView
+            android:paddingTop="@dimen/arriba"
+            android:paddingBottom="@dimen/abajo"
+            android:id="@+id/txtEmailConf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jesus@gmail.com"
+            android:textSize="@dimen/texto"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/arriba"
+        >
+
+        <TextView
+            android:paddingTop="@dimen/arriba"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Fecha nacimiento: "
+            android:textSize="@dimen/texto"
+            />
+
+        <TextView
+            android:id="@+id/txtDescripcionConf"
+            android:layout_width="210dp"
+            android:layout_height="165dp"
+            android:paddingTop="@dimen/arriba"
+            android:paddingBottom="@dimen/abajo"
+            android:text="Conoci a jesus en una cafetería"
+            android:textSize="@dimen/texto" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEditar"
+        android:layout_gravity="center"
+        android:text="Editar"
+        />
+
+
+
+</LinearLayout>

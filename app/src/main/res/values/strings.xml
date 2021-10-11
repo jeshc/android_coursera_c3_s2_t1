@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="titulo_confirmacion">Confirmar datos</string>
+</resources>

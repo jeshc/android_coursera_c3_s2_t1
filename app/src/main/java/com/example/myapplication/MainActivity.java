@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,12 +24,15 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText txtDescripcion;
     Button btnSiguiente;
     Contacto contacto;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         contacto = new Contacto();
         setContentView(R.layout.actividad_principal);
+
         txtNombre = findViewById(R.id.txtNombre);
         dtFechaNac = findViewById(R.id.dtFechaNac);
         txtTelefono = findViewById(R.id.txtTelefono);
@@ -36,8 +40,11 @@ public class MainActivity extends AppCompatActivity {
         txtDescripcion = findViewById(R.id.txtDescripcion);
         btnSiguiente =  findViewById(R.id.btnSiguiente);
         btnSiguiente.setOnClickListener(this::onClick);
+        Log.d("jhc Oncheate", "onCreate: De regrerso");
 
     }
+
+
 
     private void onClick(View v) {
         Calendar tmpDate = Calendar.getInstance(new Locale("es","mx"));
@@ -59,6 +66,37 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
 
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("jhcOnRestartee", "onRestart: Restart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("jhcOnResume", "onRestart: Resumejesus "+contacto.toString());
+
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+
+        outState.putString("nombre",contacto.getNombre());
+
+        Log.d("jhc salvandoggg", "onSaveInstanceState: salvadp");
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        contacto.setNombre(savedInstanceState.getString("nombre")+" restored");
+
+        Log.d("jhc recuperado", "onRestoreInstanceState: recuperado"+contacto.getNombre());
 
     }
 }

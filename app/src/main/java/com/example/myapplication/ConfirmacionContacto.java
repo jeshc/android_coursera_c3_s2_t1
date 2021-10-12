@@ -1,13 +1,11 @@
 package com.example.myapplication;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.TextView;
 
 public class ConfirmacionContacto extends AppCompatActivity {
@@ -39,7 +37,11 @@ public class ConfirmacionContacto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ConfirmacionContacto.this , MainActivity.class);
-
+                intent.putExtra("nombre",txtNombreConf.getText().toString());
+                intent.putExtra("fecha",dtFechaNacConf.getText().toString());
+                intent.putExtra("telefono",txtTelefonoConf.getText().toString());
+                intent.putExtra("email",txtEmailConf.getText().toString());
+                intent.putExtra("descripcion",txtDescripcionConf.getText().toString());
                 startActivity(intent);;
             }
         });

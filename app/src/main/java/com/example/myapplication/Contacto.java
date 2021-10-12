@@ -55,7 +55,7 @@ public class Contacto {
     }
 
     public String getStringDate(){
-        return fechaNacimiento.get(Calendar.DAY_OF_MONTH) + "/" + fechaNacimiento.get(Calendar.MONTH ) +"/"+ fechaNacimiento.get(Calendar.DAY_OF_MONTH);
+        return fechaNacimiento.get(Calendar.DAY_OF_MONTH) + "/" + fechaNacimiento.get(Calendar.MONTH ) +"/"+ fechaNacimiento.get(Calendar.YEAR);
     }
     @Override
     public String toString() {

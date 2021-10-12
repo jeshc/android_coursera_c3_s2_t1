@@ -24,13 +24,13 @@
         />
 
     <DatePicker
+        android:id="@+id/dtFechaNac"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:datePickerMode="spinner"
         android:calendarViewShown="false"
-        >
+        />
 
-    </DatePicker>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txtTelefono"

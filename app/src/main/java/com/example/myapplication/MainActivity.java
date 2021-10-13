@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSiguiente;
     Contacto contacto;
 
+    Bundle parametros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         contacto = new Contacto();
         setContentView(R.layout.actividad_principal);
+        parametros = getIntent().getExtras();
 
         txtNombre = findViewById(R.id.txtNombre);
         dtFechaNac = findViewById(R.id.dtFechaNac);
@@ -42,6 +44,25 @@ public class MainActivity extends AppCompatActivity {
         btnSiguiente.setOnClickListener(this::onClick);
         Log.d("jhc Oncheate", "onCreate: De regrerso");
 
+
+        try {
+            txtNombre.getText().append(parametros.getString("nombre"));
+            txtTelefono.getText().append(parametros.getString("telefono"));
+            txtEmail.getText().append(parametros.getString("email"));
+            txtDescripcion.getText().append(parametros.getString("descripcion"));
+            String fecha=parametros.getString("fecha");
+            String[] arrFecha = fecha.split("/", 5);
+            Log.d("jhc fecha", "onCreate: "+arrFecha[0]);
+            dtFechaNac.updateDate(Integer.parseInt(arrFecha[2]),
+                    Integer.parseInt(arrFecha[1]),
+                    Integer.parseInt(arrFecha[0])
+                    );
+
+
+        }catch (Exception e){
+            Log.d(" Oncheate", "onCreate: Catch");
+
+        }
     }
 
 
